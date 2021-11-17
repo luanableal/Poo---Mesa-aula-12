@@ -1,12 +1,12 @@
 package MesaAula12;
 
-import java.sql.SQLOutput;
+// Anna Lopes, Katherine Duarte, Luana Borges, Kantuta Molina, Mateus Benites Dias.
 
 public class Funcionario {
     private String nome;
     private double salario;
 
-    public Funcionario(String nome, double salario){
+    public Funcionario(String nome, double salario) {
         this.nome = nome;
         this.salario = salario;
     }
@@ -27,13 +27,16 @@ public class Funcionario {
         this.salario = salario;
     }
 
+    public void addAumento(double valor){
+        this.salario += valor;
+        System.out.println("O novo salário é " + this.salario);
+    }
+
+
     public void exibirDados (){
-        System.out.println("Nome: "+ nome+ "\n Salário: " + salario);
+        System.out.println("Nome: "+nome +"\n Salario: "+salario);
     }
-
-    public void ganhoAnual () {
-        System.out.println("Salário anual: " + salario * 12);
+    public void ganhoAnual (){
+        System.out.println("Salário anual é de"+ salario*12);
     }
-
-
 }

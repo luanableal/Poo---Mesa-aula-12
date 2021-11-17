@@ -1,17 +1,15 @@
 package MesaAula12;
 
-public class Assistente extends Funcionario{
+public class Assistente extends Funcionario {
     private String matricula;
 
-    public Assistente(String nome, double salario) {
+    public Assistente(String nome, double salario, String matricula) {
         super(nome, salario);
         this.matricula = matricula;
     }
 
-
     @Override
-    public void exibirDados() {
-        super.exibirDados();
-        System.out.println("Nome: "+ getNome()+ "\n Salário: " + getSalario());
+    public void exibirDados (){
+        System.out.println("Nome: "+getNome() +"\n Salario: "+getSalario() + "\n Matrícula: " + matricula);
     }
 }

@@ -2,20 +2,20 @@ package MesaAula12;
 
 public class Administrativo extends Funcionario {
     private boolean turno;
-    private double adcNoturno;
+    private double adicionalNoturno;
 
-    public Administrativo(String nome, double salario, boolean turno, double adcNoturno) {
+    public Administrativo(String nome, double salario, boolean turno, double adicionalNoturno) {
         super(nome, salario);
         this.turno = turno;
-        this.adcNoturno = adcNoturno;
+        this.adicionalNoturno = adicionalNoturno;
     }
 
     @Override
     public void ganhoAnual() {
         if (turno == true) {
-            System.out.println("Ganho anual é " + (getSalario() + adcNoturno));
+            System.out.println("Ganho anual é " + (getSalario() + adicionalNoturno));
         } else {
-            System.out.println("Ganho anual é " + getSalario() + " - Sem adicional noturno!");
+            System.out.println("Ganho anual é " + getSalario() + ". Sem adicional noturno.");
         }
     }
 }
